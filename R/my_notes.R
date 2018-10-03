@@ -1,2 +1,2 @@
-library(devtools)
-use_travis()
+#library(devtools)
+#use_travis()
