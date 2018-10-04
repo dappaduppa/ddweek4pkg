@@ -174,8 +174,8 @@ fars_read_years <- function(years) {
 #' 11    11   2615   2714
 #' 12    12   2457   2604
 #'
-#' @importFrom("tidyr", "spread")
-#' @importFrom("dplyr", "bind_rows", "group_by", "summarize")
+#' @importFrom tidyr spread
+#' @importFrom dplyr bind_rows group_by summarize
 #'
 #' @param years sample c(2013,2014)
 #' @return summary of the no of fatals by MONTH, for each year in the spread format.
