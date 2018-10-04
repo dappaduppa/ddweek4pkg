@@ -111,7 +111,7 @@ fars_read <- function(filename) {
 #'
 make_filename <- function(year) {
   year <- as.integer(year)
-  sprintf("accident_%d.csv.bz2", year)
+  sprintf("inst/extdata/accident_%d.csv.bz2", year)
 }
 
 #' "fars_read_years" function return the dataframe containing
