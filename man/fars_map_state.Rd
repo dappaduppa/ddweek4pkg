@@ -7,7 +7,9 @@
 fars_map_state(state.num, year)
 }
 \arguments{
-\item{state.num}{year
+\item{state.num}{state number}
+
+\item{year}{year
 
 sample state.num and the corresponding state.
 ---------------------------------------------

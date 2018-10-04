@@ -9,10 +9,10 @@ For the given vector of "years", in a file.}
 fars_read_years(years)
 }
 \arguments{
-\item{vector}{of years}
+\item{years}{years vector.}
 }
 \value{
-dataframe containing 1) MONTH and 2) year For the given vector of "years", in a file.
+dataframe containing MONTH and year For the given vector of "years", in a file.
 
 Error : If the given year is not found with the prepared filename by "make_filename", then
 error is thrown as "invalid year: ": xxxx

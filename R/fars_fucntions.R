@@ -4,10 +4,12 @@
 #' This is called internally, called from "fars_read_years"
 #' not intended for user call.
 #'
+#'
 #' @source US National Highway Traffic Safety Administration's Fatality Analysis Reporting System.
 #' \url{https://www.nhtsa.gov/research-data/fatality-analysis-reporting-system-fars}
-#' @source for the column level understanding following link/pdf is referred.
-#' \url{http://www.nber.org/fars/ftp.nhtsa.dot.gov/fars/FARS-DOC/Analytical%20User%20Guide/USERGUIDE-2015.pdf}
+#'
+#' @source Column level understanding following link/pdf is referred.
+#' \url{http://www.nber.org/fars/ftp.nhtsa.dot.gov/fars/FARS-DOC/Analytical User Guide/USERGUIDE-2015.pdf}
 #'
 #' @importFrom readr read_csv
 #'
@@ -120,8 +122,10 @@ make_filename <- function(year) {
 #' This is called internally, by "fars_summarize_years" function.
 #' not intended for user call.
 #'
-#' @param years
-#' @return dataframe containing 1) MONTH and 2) year For the given vector of "years", in a file.
+#' @importFrom dplyr mutate select
+#'
+#' @param years years vector.
+#' @return dataframe containing MONTH and year For the given vector of "years", in a file.
 #'
 #' Error : If the given year is not found with the prepared filename by "make_filename", then
 #' error is thrown as "invalid year: ": xxxx
@@ -170,6 +174,8 @@ fars_read_years <- function(years) {
 #' 11    11   2615   2714
 #' 12    12   2457   2604
 #'
+#' @importFrom("tidyr", "spread")
+#' @importFrom("dplyr", "bind_rows", "group_by", "summarize")
 #'
 #' @param years sample c(2013,2014)
 #' @return summary of the no of fatals by MONTH, for each year in the spread format.
@@ -196,8 +202,8 @@ fars_summarize_years <- function(years) {
 #' 1) First draw the "state", by getting the min, max . i.e. the given range of lat, long
 #' 2) Then "point" it with all "data"(lat, long) of the corresponding state.
 #'
-#' @param state.num
-#' @param year
+#' @param state.num state number
+#' @param year year
 #'
 #' sample state.num and the corresponding state.
 #' ---------------------------------------------

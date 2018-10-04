@@ -68,6 +68,9 @@ Error: throws error if the supplied file "foo" is not found, then throws the fol
 \source{
 US National Highway Traffic Safety Administration's Fatality Analysis Reporting System.
 \url{https://www.nhtsa.gov/research-data/fatality-analysis-reporting-system-fars}
+
+Column level understanding following link/pdf is referred.
+\url{http://www.nber.org/fars/ftp.nhtsa.dot.gov/fars/FARS-DOC/Analytical User Guide/USERGUIDE-2015.pdf}
 }
 \usage{
 fars_read(filename)

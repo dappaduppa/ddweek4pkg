@@ -7,7 +7,7 @@
 fars_summarize_years(years)
 }
 \arguments{
-\item{vector}{of years. sample c(2013,2014)}
+\item{years}{sample c(2013,2014)}
 }
 \value{
 summary of the no of fatals by MONTH, for each year in the spread format.

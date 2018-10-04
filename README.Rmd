@@ -14,7 +14,7 @@ knitr::opts_chunk$set(
 
 # ddweek4pkg
 
-The goal of ddweek4pkg is to ...
+The goal of ddweek4pkg is to Fatality Analysis Reporting System...
 
 ## Installation
 
@@ -31,7 +31,7 @@ This is a basic example which shows you how to solve a common problem:
 
 ```{r example}
 ## basic example code
-fars_map_state(1,2013)
+fars_map_state(1,"2013")
 
 fars_summarize_years(c("2013", "2014"))
 ```

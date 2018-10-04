@@ -1,6 +1,6 @@
 Package: ddweek4pkg
 Type: Package
-Imports: dplyr, maps, readr
+Imports: dplyr, maps, readr, tidyr
 Title: Fatality Analysis Reporting System
 Version: 0.1.0
 Author: Dhanasekaran Vivekanandhan
