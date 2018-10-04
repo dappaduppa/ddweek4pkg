@@ -120,7 +120,7 @@ make_filename <- function(year) {
 #' This is called internally, by "fars_summarize_years" function.
 #' not intended for user call.
 #'
-#' @param vector of years
+#' @param years
 #' @return dataframe containing 1) MONTH and 2) year For the given vector of "years", in a file.
 #'
 #' Error : If the given year is not found with the prepared filename by "make_filename", then
@@ -171,7 +171,7 @@ fars_read_years <- function(years) {
 #' 12    12   2457   2604
 #'
 #'
-#' @param vector of years. sample c(2013,2014)
+#' @param years sample c(2013,2014)
 #' @return summary of the no of fatals by MONTH, for each year in the spread format.
 #'
 #' @examples
@@ -196,7 +196,8 @@ fars_summarize_years <- function(years) {
 #' 1) First draw the "state", by getting the min, max . i.e. the given range of lat, long
 #' 2) Then "point" it with all "data"(lat, long) of the corresponding state.
 #'
-#' @param state.num year
+#' @param state.num
+#' @param year
 #'
 #' sample state.num and the corresponding state.
 #' ---------------------------------------------
