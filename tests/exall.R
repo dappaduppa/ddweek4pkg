@@ -1,1 +1,1 @@
-testthat::expect_that(sqrt(3) * sqrt(3), equals(2))
+testthat::expect_that(sqrt(3) * sqrt(3), equals(21))
