@@ -5,7 +5,7 @@ Title: Fatality Analysis Reporting System
 Version: 0.1.0
 Author: Dhanasekaran Vivekanandhan
 Maintainer: Dhanasekaran Vivekanandhan <duppadappa@gmail.com>
-Description: For the given state, year report fatals.
+Description: For the given state, year report fatal.
 License: CC0
 Encoding: UTF-8
 LazyData: true
