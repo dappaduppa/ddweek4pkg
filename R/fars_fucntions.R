@@ -122,6 +122,7 @@ make_filename <- function(year) {
 #' This is called internally, by "fars_summarize_years" function.
 #' not intended for user call.
 #'
+#' @import magrittr
 #' @importFrom dplyr mutate select
 #'
 #' @param years years vector.
@@ -174,6 +175,7 @@ fars_read_years <- function(years) {
 #' 11    11   2615   2714
 #' 12    12   2457   2604
 #'
+#' @import magrittr
 #' @importFrom tidyr spread
 #' @importFrom dplyr bind_rows group_by summarize
 #'

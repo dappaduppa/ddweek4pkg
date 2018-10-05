@@ -1,37 +1,49 @@
----
-output: Fatality Analysis Reporting System
----
-
 <!-- README.md is generated from README.Rmd. Please edit that file -->
-
-
-
-# ddweek4pkg
+ddweek4pkg
+==========
 
 The goal of ddweek4pkg is to Fatality Analysis Reporting System...
 
-## Installation
+Installation
+------------
 
 You can install ddweek4pkg from github with:
 
-
-```r
+``` r
 # install.packages("devtools")
 devtools::install_github("dappaduppa/ddweek4pkg")
 ```
 
-## Example
+Example
+-------
 
 This is a basic example which shows you how to solve a common problem:
 
-
-```r
+``` r
 ## basic example code
+library(ddweek4pkg)
+library(magrittr)
 fars_map_state(1,"2013")
-#> Error in fars_read(filename): file 'accident_2013.csv.bz2' does not exist
+```
+
+![](README-example-1.png)
+
+``` r
 
 fars_summarize_years(c("2013", "2014"))
-#> Warning in value[[3L]](cond): invalid year: 2013
-#> Warning in value[[3L]](cond): invalid year: 2014
-#> Error in dplyr::bind_rows(dat_list) %>% dplyr::group_by(year, MONTH) %>% : could not find function "%>%"
+#> # A tibble: 12 x 3
+#>    MONTH `2013` `2014`
+#>    <int>  <int>  <int>
+#>  1     1   2230   2168
+#>  2     2   1952   1893
+#>  3     3   2356   2245
+#>  4     4   2300   2308
+#>  5     5   2532   2596
+#>  6     6   2692   2583
+#>  7     7   2660   2696
+#>  8     8   2899   2800
+#>  9     9   2741   2618
+#> 10    10   2768   2831
+#> 11    11   2615   2714
+#> 12    12   2457   2604
 ```
