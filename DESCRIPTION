@@ -5,9 +5,7 @@ Title: Fatality Analysis Reporting System
 Version: 0.1.0
 Author: Dhanasekaran Vivekanandhan
 Maintainer: Dhanasekaran Vivekanandhan <duppadappa@gmail.com>
-Description: Fatality Analysis Reporting System.
-    For the given state, report Moth-wise(12 months) fatals 
-    in spread format for the given years as input
+Description: For the given state, year report fatals.
 License: CC0
 Encoding: UTF-8
 LazyData: true

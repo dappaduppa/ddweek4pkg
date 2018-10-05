@@ -1,3 +1,5 @@
+globalVariables(c("MONTH", "STATE", "n", "year", "%>%"))
+
 #' fars_read: Convert the csv file content into data frame.
 #'
 #' This is utility function.
