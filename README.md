@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/dappaduppa/ddweek4pkg.svg?branch=master)](https://travis-ci.org/dappaduppa/ddweek4pkg)
+
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 ddweek4pkg
 ==========
@@ -23,6 +25,7 @@ This is a basic example which shows you how to solve a common problem:
 ## basic example code
 library(ddweek4pkg)
 library(magrittr)
+
 fars_map_state(1,"2013")
 ```
 
