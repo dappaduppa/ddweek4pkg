@@ -3,6 +3,10 @@ title: "Fatality Analysis Reporting System"
 output:
   md_document:
     variant: markdown_github
+vignette: >
+  %\VignetteIndexEntry{Fatality Analysis Reporting System}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
 ---
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
