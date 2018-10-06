@@ -38,8 +38,11 @@ This is a basic example which shows you how to solve a common problem:
 
 ```{r example}
 ## basic example code
+# globalVariables(c("MONTH", "STATE", "n", "year", "%>%"))
 library(ddweek4pkg)
 library(magrittr)
+dpath("inst/extdata/")
+
 fars_map_state(1,"2013")
 
 fars_summarize_years(c("2013", "2014"))

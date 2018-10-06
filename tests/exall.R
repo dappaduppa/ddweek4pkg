@@ -1,7 +1,14 @@
+#globalVariables(c("MONTH", "STATE", "n", "year", "%>%"))
 library(testthat)
+# library(magrittr)
+# library(dplyr)
+# library(maps)
+# library(readr)
+# library(tidyr)
+# library(magrittr)
 library(ddweek4pkg)
-
-res <- fars_summarize_years(c("2013", "2014"))
+dpath("abcd")
+res <- fars_summarize_years(c(2013, 2014))
 
 #res
 # # A tibble: 12 x 3

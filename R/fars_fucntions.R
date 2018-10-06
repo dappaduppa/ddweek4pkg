@@ -1,4 +1,19 @@
-globalVariables(c("MONTH", "STATE", "n", "year", "%>%"))
+globalVariables(c("MONTH", "STATE", "n", "year", "%>%", "gdpath"))
+
+#' dpath: dir path setting for normal and test code
+#'
+#' @param path dir path
+#' @return set the gdpath global variable
+#'
+#' @examples
+#' \dontrun{
+#' dpath("inst/extdata/")
+#' }
+#'
+#' @export
+dpath <- function(mpath) {
+  gdpath <- mpath
+}
 
 #' fars_read: Convert the csv file content into data frame.
 #'
@@ -113,7 +128,7 @@ fars_read <- function(filename) {
 #'
 make_filename <- function(year) {
   year <- as.integer(year)
-  sprintf("inst/extdata/accident_%d.csv.bz2", year)
+  paste0(gdpath, sprintf("accident_%d.csv.bz2", year))
 }
 
 #' "fars_read_years" function return the dataframe containing
@@ -149,6 +164,9 @@ fars_read_years <- function(years) {
         dplyr::select(MONTH, year)
     }, error = function(e) {
       warning("invalid year: ", year)
+      e$message <- paste("While training model", e, sep = " ")
+      # and re-raise
+      stop(e)
       return(NULL)
     })
   })
@@ -193,6 +211,7 @@ fars_read_years <- function(years) {
 fars_summarize_years <- function(years) {
   dat_list <- fars_read_years(years)
   # print(dat_list)
+
   dplyr::bind_rows(dat_list) %>%
     dplyr::group_by(year, MONTH) %>%
     dplyr::summarize(n = n()) %>%
