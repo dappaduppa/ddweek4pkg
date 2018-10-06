@@ -1,19 +1,4 @@
-globalVariables(c("MONTH", "STATE", "n", "year", "%>%", "gdpath"))
-
-#' dpath: dir path setting for normal and test code
-#'
-#' @param path dir path
-#' @return set the gdpath global variable
-#'
-#' @examples
-#' \dontrun{
-#' dpath("inst/extdata/")
-#' }
-#'
-#' @export
-dpath <- function(mpath) {
-  gdpath <- mpath
-}
+globalVariables(c("MONTH", "STATE", "n", "year", "%>%"))
 
 #' fars_read: Convert the csv file content into data frame.
 #'
@@ -128,7 +113,7 @@ fars_read <- function(filename) {
 #'
 make_filename <- function(year) {
   year <- as.integer(year)
-  paste0(gdpath, sprintf("accident_%d.csv.bz2", year))
+  system.file("extdata", sprintf("accident_%d.csv.bz2", year), package = "ddweek4pkg")
 }
 
 #' "fars_read_years" function return the dataframe containing

@@ -1,13 +1,5 @@
-#globalVariables(c("MONTH", "STATE", "n", "year", "%>%"))
 library(testthat)
-# library(magrittr)
-# library(dplyr)
-# library(maps)
-# library(readr)
-# library(tidyr)
-# library(magrittr)
 library(ddweek4pkg)
-dpath("abcd")
 res <- fars_summarize_years(c(2013, 2014))
 
 #res
@@ -27,4 +19,4 @@ res <- fars_summarize_years(c(2013, 2014))
 # 11    11   2615   2714
 # 12    12   2457   2604
 
-expect_that(any(res==25961), is_true())
+expect_that(any(res==2596), is_true())
